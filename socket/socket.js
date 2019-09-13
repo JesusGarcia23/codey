@@ -35,9 +35,9 @@ function socket(io) {
                    
                     socket.emit('showUsersDb', users);
                     // users[socket.id] = userData;
-                    console.log("HELLO WOLRD 2")
-                    console.log(users);
-                    console.log(socket.handshake.headers.referer);
+                    // console.log("HELLO WOLRD 2")
+                    // console.log(users);
+                    // console.log(socket.handshake.headers.referer);
                     io.in(data).emit('listOfUsers',  users[data]);
                     // io.in(data).emit('listOfUsers', {theId: socket.id, theUser: userData});
             
@@ -52,8 +52,8 @@ function socket(io) {
                   //  console.log(socket.adapter.rooms);
             
                     // socket.emit('sendRoom', {theRoom: socket.adapter.rooms})
-                    console.log("THE ACTUAL ROOM IS")
-                    console.log(io.sockets);
+                    // console.log("THE ACTUAL ROOM IS")
+                    // console.log(io.sockets);
                     // socket.emit('actualRoom', {actualRoom: io.sockets});
                     // socket.emit('setSocketId', {theId: socket.id, name: data});
                    })
@@ -75,7 +75,7 @@ function socket(io) {
          //  console.log(hUrl[2]);
          let realUrl = hUrl[2];
 
-       console.log("SERVER THIS");
+    //    console.log("SERVER THIS");
        
        
 
@@ -117,10 +117,10 @@ function socket(io) {
             if (data == undefined || !data){
                 return;
             } else{
-                console.log("YOU WERE KICKED");
-                console.log(data);
-                console.log("THE USER WAS");
-                console.log(io.sockets.connected[socket.id]);
+                // console.log("YOU WERE KICKED");
+                // console.log(data);
+                // console.log("THE USER WAS");
+                // console.log(io.sockets.connected[socket.id]);
                 io.sockets.connected[data].emit('exitChat', '/allChats');
             }
        

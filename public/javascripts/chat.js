@@ -14,7 +14,7 @@ let button = document.getElementsByClassName('removeBtn');
 
 (function () {
     // let myData = {name: theUser, userId: socket.id};
-    console.log("CLIENT SIDE");
+   // console.log("CLIENT SIDE");
 
     
   socket.emit('joinRoom', myRoomId);
@@ -50,8 +50,8 @@ let button = document.getElementsByClassName('removeBtn');
 
     //DISPLAY ID
 socket.on('listOfUsers', function(data){
-    console.log("USERS LIST: ");
-    console.log(data[0]);
+  //  console.log("USERS LIST: ");
+  //  console.log(data[0]);
     for(let i = 0; i < data.length; i++){
        for(let j = 0; j < button.length; j++){
            if(data[i].userName === button[j].value){
@@ -173,7 +173,7 @@ messageInput.addEventListener("keypress", () => {
 
 socket.on("notifyTyping", data => {
     typing.innerText = data.user + " " + data.message;
-    console.log(data.user + data.message);
+  //  console.log(data.user + data.message);
 });
 
 //stop typing
@@ -207,10 +207,10 @@ function formatTime(dateStr) {
 
 };
 
-socket.on('showUsersDb', function(data){
-    console.log("THE DATABASE IS");
-    console.log(data);
-});
+// socket.on('showUsersDb', function(data){
+//   //  console.log("THE DATABASE IS");
+//  //   console.log(data);
+// });
 
 
 socket.on('exitChat', function(data){
@@ -219,7 +219,7 @@ socket.on('exitChat', function(data){
 
 for (let i = 0; i < button.length; i++) {
     button[i].addEventListener("click", () => {
-        console.log(button[i].value)
+        // console.log(button[i].value)
         socket.emit("kicked", button[i].name);
     })
 }
