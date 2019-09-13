@@ -1,0 +1,48 @@
+.editRoomForm {
+    border-image: linear-gradient(to right, rgba(4,31,107, 1) 50%,rgba(54, 1, 35, 1) 10%,  rgba(110,9,121,1) 39%);
+    border-width: 3px;
+    max-width: 1000px;
+    border-style: solid;
+    align-items: center;
+    border-image-slice: 1;
+    padding: 30px;
+    margin: auto;
+    
+
+}
+
+.editChatFriendContainer {
+    display: block;
+    margin: auto;
+    max-width: 1000px;
+    max-height: 210px;
+    overflow: auto;
+    margin-bottom: 30px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.firstEditForm {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+.theEditLabel {
+    margin-right: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+ 
+    .theEditLabel {
+        margin-bottom: 30px;
+        margin-right: 0px;
+        max-width: 460px;
+    }
+
+    .theEditLabel > label {
+        display: block;
+        max-width: 460px;
+    }
+}

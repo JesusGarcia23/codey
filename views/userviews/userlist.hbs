@@ -1,0 +1,70 @@
+<div class="lobbiesMainTitle">
+  <h1>Your Lobbies</h1>
+</div>
+<div class="container-fluid lobbyContainer">
+  <div class="row">
+
+{{#each creatorRooms}}
+    {{!-- <p> your lobbies: {{this.name}} <a href="/userChats/{{this._id}}"> Enter Lobby</a> </p> --}}
+    <script id="helper" type="template/handlebars">
+      {{this._id}}
+    </script>
+
+    <div class="col-xs-12 card text-white bg-dark mb-3" style="max-width: 300px; height: 300px;">
+      <div class="card-header">{{this.name}}</div>
+      <div class="card-body">
+        <div class="userlistL">
+          <ul>
+            <li>{{this.creator}}</li>
+            {{#each this.friends}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="chatL"></div>
+        <div class="compilerL"> </div>
+        <spn class="editChatBtn">
+             <a href="/userChats/edit/{{this._id}}">Edit Lobby</a>
+        </spn>
+        <span class="enterChatBtn">
+           <a href="/userChats/{{this._id}}"> Enter Lobby</a> </span>
+      </div>
+
+
+    </div>
+    {{/each}}
+
+
+
+
+
+
+    {{#each friendRooms}}
+    {{!-- <p> your lobbies: {{this.name}} <a href="/userChats/{{this._id}}"> Enter Lobby</a> </p> --}}
+    <script id="helper" type="template/handlebars">
+      {{this._id}}
+    </script>
+
+    <div class="col-xs-12 card text-white bg-dark mb-3" style="max-width: 300px; height: 300px;">
+      <div class="card-header">{{this.name}}</div>
+      <div class="card-body">
+        <div class="userlistL">
+          <ul>
+            <li>{{this.creator}}</li>
+            {{#each this.friends}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="chatL"></div>
+        <div class="compilerL"> </div>
+        <div class="enterChatBtn"> <a href="/userChats/{{this._id}}"> Enter Lobby</a> </div>
+
+      </div>
+
+
+    </div>
+    {{/each}}
+  </div>
+
+</div>

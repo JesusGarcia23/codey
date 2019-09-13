@@ -1,0 +1,6 @@
+1. This application initialized using express generator --hbs
+2. Project dependencies include: socket.io (both client and server),  express, mongoose, hbs, sessions, passport and passport dependencies
+3. primarily the logic for socket and obtaining messages in defined inside of socket/socket.js file, incapsulated inside a function
+4. APIS/ will contain routes for axios to rooms, code, and friends. 
+5. javascripts/ contains the client side js, including client socket and client axios.
+6. javascripts/compiler.js contains the fuctionality of the text area being used as an editor. 

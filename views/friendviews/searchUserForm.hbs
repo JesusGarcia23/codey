@@ -1,0 +1,40 @@
+<div class="container searchUserContainer">
+    <div class="form-group searchUserForm">
+        <form action="/searchUser" method="GET">
+            <label>Username</label>
+            <input type="text" name="userToSearch">
+                <button class="searchUserBtn">Search</button>
+    </div>
+
+    </form>
+
+  <div class="form-group searchUserForm">
+    <form action="/AddNewFriend" method="POST">
+            <label>Username</label>
+            <input type="text" name="name">
+            <button class="searchUserBtn">Add Friend</button>
+    </form>
+  </div>
+</div>
+
+<ul>
+    {{#if theUser}}
+
+    {{#each theUser}}
+    <li>{{this.username}}</li>
+
+    {{!-- <form action="/AddNewFriend" method="POST">
+<button class="addFriend" value="{{this._id}}">ADD FRIEND</button>
+</form> --}}
+
+
+    {{/each}}
+
+    {{/if}}
+</ul>
+{{!-- {{#if errorMessage}}
+<div>{{errorMessage}}</div>
+{{/if}} --}}
+<div class="searchGoBack">
+<a href="/"><i class="arrow left"></i>Go back</a>
+</div>

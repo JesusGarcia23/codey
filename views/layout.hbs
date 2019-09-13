@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="javascripts/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+  {{!-- <nav class="mainNav navbar-toggler navbar-collapse">
+   
+  
+    {{#if currentUser}}
+    <span class="theUser  welcomeUser">Welcome, {{currentUser.username}}</span>
+    </span>
+    
+    <a href="/friendlist">See All Friends</a>
+    <a href="/searchUser">Add Friends</a>
+    <a href="/lobby/{{currentUser._id}}">User Lobby</a>
+
+   <span class="logOutBtn">
+<form class="logOutForm" action="/logout" method="POST">
+      <button>Log out</button>
+    </form>
+    </span>
+    {{else}}
+ <span class="codeyLogo">
+{{title}}
+    </span>
+
+    <a href="Signup">Sign up</a>
+    <a href="Login">Login</a>
+    <a href="/auth/slack">Login With Slack</a>
+    <a href="/auth/github"> Login with Github</a>
+
+
+    {{/if}}
+</nav> --}}
+   
+<nav class="navbar navbar-expand-lg navbar-dark mainNav">
+   {{#if currentUser}}
+
+   {{else}}
+<a class="navbar-brand" href="/">Codey</a>
+   {{/if}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+   {{#if currentUser}}
+<span class="theUser  welcomeUser">Welcome, {{currentUser.username}}</span>
+    
+
+<span class="userNav">
+  <ul>
+   <li><a href="/friendlist">See All Friends</a></li> 
+    <li><a href="/searchUser">Add Friends</a></li> 
+    <li><a href="/lobby/{{currentUser._id}}">User Lobby</a></li> 
+    <li class="logOut"><form class="logOutForm" action="/logout" method="POST">
+      <button>Log out</button>
+    </form></li>
+    </ul>
+</span>
+
+    <span class="logOutBtn">
+
+    </span>
+   {{else}}
+    <span class="userNav codey-nav-item">
+      <ul>
+     <li> <a class="nav-item nav-link" href="Signup">Signup</a></li>
+     <li><a class="nav-item nav-link" href="Login">Login</a></li> 
+      <li><a class="nav-item nav-link" href="/auth/slack">Login With Slack</a></li>
+      <li><a class="nav-item nav-link" href="/auth/github">Login With Github</a></li>
+      </ul>
+    </span>
+   {{/if}}
+  </div>
+    
+</nav>
+
+
+    {{{body}}}
+
+{{#if errorMessage}}
+  <div class="theErrorMessage">{{errorMessage}}</div>
+  {{/if}}
+
+
+
+  {{#if successMessage}}
+  <div class="theSuccessMessage">{{successMessage}}</div>
+  {{/if}}
+
+
+</body>
+
+
+
+
+</html>

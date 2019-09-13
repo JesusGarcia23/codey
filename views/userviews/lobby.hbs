@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/stylesheets/lobby.css">
+
+{{#if user }}
+
+
+{{!-- <p>Welcome, {{user.username}}</p> --}}
+<div class="createChatTitle">
+<h2>Create a new Chatroom</h2>
+</div>
+
+<div class="createChatP">
+<p>Enter your Chatroom details here:</p>
+</div>
+
+<div class="container createChatContainer">
+    <form action="/create/chat" method="POST">
+        <div class="form-row createChatRoom">
+            <div class="form-group col-md-6">
+                <label for="name">Enter Chatroom Name</label>
+                <input class="form-control" type="text" name="name">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="topic">Specify Topic</label>
+                <input class="form-control" type="text" name="topic">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="friends"> add friends: </label>
+                <br>
+            </div>
+            <div class="createChatFriendContainer">
+                    {{!-- <ul class="list-group"> --}}
+                {{#each friendship}}
+                    <div class="list-group-item">
+                        <input type="checkbox" value="{{this.friend.username}}" name="friends">
+                        <label class="username">
+                            {{this.friend.username}}
+                        </label>
+                    </div>
+                {{/each}}
+                   {{!-- </ul> --}}
+                </div>
+        </div>
+        <button class="btn  btn-primary createChatSubmitBtn" type="submit">Create Chat</button>
+    </form>
+</div>
+
+<div class="enterLobbiesBtn">
+<a href="/allchats">Enter Lobbies <i class="arrow right"></i></a>
+</div>
+{{!-- {{#each userLobbies}}
+{{this._id}}
+{{/each}} --}}
+
+{{/if}}

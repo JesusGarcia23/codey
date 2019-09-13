@@ -1,0 +1,62 @@
+{{#if currentUser}}
+
+<div class="friendContainer">
+<button class="friendBtn" id="pendingFBtn">See Pending Friends</button>
+<button class="friendBtn" id="requestedFBtn">See Requested Friends</button>
+<button class="friendBtn" id="friendsFBtn">See All Friends</button>
+</div>
+
+<div id="friendTitle"></div>
+
+<div id="listFriend"></div>
+{{/if}}
+
+
+
+
+
+
+
+{{!-- 
+{{#if currentUser}}
+<button>Requested</button>
+<button>Pending</button>
+<button>Friends</button>
+<h1>All your Friends</h1>
+
+
+{{#if friendship}}
+{{#each friendship}}
+<li>Name: {{this.friend.username}} | | Status: {{this.status}}
+  {{#if_eq this.status "pending"}}
+  <form action="/acceptRequest/{{this._id}}" method="POST">
+    <button>accept</button>
+  </form>
+  {{!-- <form action="/declineRequest/{{this._id}}" method="POST">
+    <button>Decline</button>
+  </form> --}}
+  {{!-- <form action='/delete/{{this._id}}' method="POST">
+    <button>Decline</button>
+  </form>
+  {{/if_eq}}
+
+  <form action='/delete/{{this._id}}' method="POST">
+    <button>Remove Friend</button>
+  </form>
+</li> --}}
+{{!-- <form>
+
+</form> --}}
+{{!-- {{/each}}
+
+{{else}}
+<div>You have no friends</div>
+{{/if}}
+
+{{/if}} --}} 
+
+
+ <script type='text/javascript' src='js/handlebars-v4.0.5.js'></script>
+    <script type='text/javascript' src='js/name-table.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+   <script src="javascripts/friend.js"></script>

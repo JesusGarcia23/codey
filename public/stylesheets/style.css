@@ -1,0 +1,622 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* a {
+  color: #00B7FF;
+} */
+
+.mainNav{
+  /* display: inline-flex; */
+  z-index: 10;
+  padding-bottom: 30px;
+ justify-content: center;
+  width: 100vw;
+  height: 60px;
+  background: rgb(54,1,35);
+  background: linear-gradient(270deg, rgba(54,1,35,1) 10%, rgba(110,9,121,1) 39%, rgba(4,31,107,1) 100%);
+}
+
+.mainNav > a{
+  margin-right: 40px;
+ color: white;
+}
+
+.mainNav > a:hover{
+text-decoration: none;
+ color: gray;
+}
+
+.userNav {
+  margin-left: 30px;
+}
+
+.userNav ul{
+  list-style-type: none;
+  display: block;
+}
+.userNav li{
+  float: left;
+}
+
+.userNav a {
+  color: white;
+  font-weight: bold;
+text-decoration-style: none;
+margin-right: 30px;
+}
+
+.userNav a:hover{
+  color: rgb(211, 198, 198);
+text-decoration-line: none;
+}
+
+.codey-nav-item a{
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav{
+  color: white;
+}
+
+.codey-nav-item a:hover{
+  color: rgb(211, 198, 198);
+text-decoration-line: none;
+}
+
+
+
+.codeyLogo{
+  color: white;
+  font-size: 35px;
+  margin-right: 50px;
+}
+.codeyContainer{
+
+  height: 91vh;
+}
+
+.codeyParagraph{
+color: white;
+  font-size: 30px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.codeyTitle{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.codeyTitle > h1{
+  color: white;
+  font-size: 150px;
+}
+.mainBckgrd{
+  width: 100vw;
+  height: 93vh;
+  background-image: url('/images/mainScreenCodey.gif');
+  background-size: cover;
+}
+
+
+/* USER LOGGED IN CSS */
+.logOut{
+  position: absolute;
+  left: 80%;
+}
+
+.logOutForm > button{
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: 0px;
+
+}
+
+.welcomeUser{
+  font-family: Calibri;
+  font-weight: bold;
+  color: white;
+  font-size: 35px;
+}
+
+
+/* LOGGING AND SIGN UP CSS */
+.signUpTitle, .loginTitle{
+  margin-top: 50px;
+text-align: center;
+}
+
+.signupForm,.loginForm{
+  margin: 0px 20%;
+}
+
+.theErrorMessage{
+  text-align: center;
+  margin-top: 40px;
+  width: 50%;
+  color: red;
+  border: 1px solid red;
+  margin-left: 26vw;
+}
+
+.theSuccessMessage{
+  text-align: center;
+  margin-top: 40px;
+  width: 50%;
+  color: green;
+  border: 1px solid green;
+  margin-left: 26vw;
+}
+
+/* FRIEND LIST CSS */
+
+.friendContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#friendTitle{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.friendBtn {
+  margin: 30px 30px;
+  color: white;
+background-color: rgb(154, 10, 170);
+border: 5px solid rgb(154, 10, 170);
+border-radius: 50px;
+}
+
+.friendBtn:hover {
+  margin: 30px 30px;
+  color: white;
+background-color: rgba(110,9,121,1);
+border: 5px solid rgba(110,9,121,1);
+border-radius: 50px;
+}
+
+#listFriend{
+  max-height: 400px;
+  overflow: auto;
+}
+
+.friendlist-div {
+  height: 100px;
+  display: flex;
+  margin: 20px 300px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.labelFriend{
+  font-size: 80px;
+}
+
+.friendlist-item{
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  display: inline-block;
+  margin: 50px auto;
+}
+
+.friendlist-div > p{
+  text-align: center;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  width: 400px;
+}
+
+.addFriendBtn {
+  color: white;
+  background-color: green;
+  border: 7px solid green;
+  border-radius: 30px;
+}
+
+.deleteFriendBtn{
+  float: right;
+  border: 7px solid red;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+}
+
+/* CREATE A CHAT CSS */
+.createChatTitle {
+text-align: center;
+margin: 30px 0px;
+}
+
+.createChatP {
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.enterLobbiesBtn {
+  text-decoration: none;
+text-align: right;
+margin-right: 50px;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+
+.enterLobbiesBtn a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(110,9,121,1);
+  border: 10px solid rgba(110,9,121,1);
+  border-radius: 10px;
+}
+
+.enterLobbiesBtn a:hover {
+  color: white;
+  background-color: rgb(154, 10, 170);
+  border: 10px solid rgb(154, 10, 170);
+  text-decoration: none;
+}
+
+.enterLobbiesBtn:hover i{
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
+}
+
+.right {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.createChatRoom label{
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* EDIT CHAT CSS */
+
+.editRoomTitle {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.editRoomTitle h2 {
+  font-size: 50px;
+}
+
+/* LOBBY CSS */
+.lobbyContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0px;
+
+  /* border-image: linear-gradient(to right, rgba(4,31,107, 1) 50%,rgba(54, 1, 35, 1) 10%,  rgba(110,9,121,1) 39%);
+  border-width: 3px;
+  border-style: solid;
+
+  border-image-slice: 1; */
+}
+.card {
+  border-radius: 50px;
+  height: 300px;
+  width: 300px;
+  margin: 50px 100px;
+}
+
+.lobbiesMainTitle{
+text-align: center;
+margin: 30px 0px;
+}
+
+.lobbiesMainTitle h1{
+  font-size: 60px;
+}
+
+.card-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.userlistL{
+  text-align: left;
+  font-size: 7px;
+  float: left;
+  background-color: black;
+  height: 170px;
+  width: 20%;
+}
+
+.userlistL ul{
+  padding-left: 15px;
+}
+
+
+.chatL {
+  float: left;
+  background-image: url('/images/chatImage-01.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 170px;
+  width: 40%;
+}
+
+.compilerL{
+  display: block;
+  font-size: 3px;
+  float: left;
+  /* background-color: black; */
+  background-image: url('/images/codeImage-01.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 170px;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.editChatBtn{
+  text-align: center;
+  margin-right: 65px;
+}
+
+.editChatBtn > a{
+  color: white;
+  height: 60px;
+  width: 100px;
+  background-color: rgb(2, 2, 173);
+  border: 7px solid rgb(2, 2, 173);
+  border-radius: 50px;
+  
+  text-decoration-style: none;
+}
+
+.editChatBtn > a:hover{
+  color: rgb(165, 161, 161);
+  text-decoration-line: none;
+  background-color: darkblue;
+  border: 7px solid darkblue;
+}
+
+.enterChatBtn{
+  text-align: center;
+}
+
+
+.enterChatBtn > a{
+  color: white;
+  height: 60px;
+  width: 100px;
+  background-color: rgb(154, 10, 170);
+  border: 7px solid rgb(154, 10, 170);
+  border-radius: 50px;
+  
+  text-decoration-style: none;
+}
+
+.enterChatBtn > a:hover{
+  color: rgb(165, 161, 161);
+  text-decoration-line: none;
+  background-color: rgba(110,9,121,1);
+  border: 7px solid rgba(110,9,121,1);
+}
+
+
+/* FIND USER AND ADD USER CSS */
+.searchUserContainer {
+  margin-top: 100px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-image: linear-gradient(to right, rgba(4,31,107, 1) 50%,rgba(54, 1, 35, 1) 10%,  rgba(110,9,121,1) 39%);
+    border-width: 3px;
+    border-style: solid;
+
+    border-image-slice: 1;
+  height: 300px;
+}
+
+.searchUserForm {
+  margin: 50px 350px;
+}
+
+.searchUserForm label{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.searchUserBtn {
+  color: white;
+  border: 5px solid rgba(110,9,121,1);
+  border-radius: 25px;
+  background-color: rgba(110,9,121,1);
+  margin-left: 20px;
+}
+
+.searchUserBtn:hover{
+  color: white;
+  border: 5px solid rgb(125, 10, 138);
+  border-radius: 25px;
+  background-color: rgb(125, 10, 138);
+  margin-left: 20px;
+}
+
+.searchGoBack{
+  margin-top: 50px;
+margin-left: 50px;
+}
+
+ .searchGoBack a{
+   font-size: 20px;
+  background-color: rgba(4,31,107, 1);
+  border: 10px solid rgba(4,31,107, 1);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.searchGoBack a:hover{
+  font-size: 20px;
+ background-color: rgb(5, 39, 134);
+ border: 10px solid rgb(5, 39, 134);
+ border-radius: 25px;
+ text-decoration: none;
+ color: white;
+}
+
+.searchGoBack:hover i{
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+
+}
+
+.left {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+
+
+/* RESPONSIVE CSSS */
+
+@media only screen and (max-width: 991px) {
+  .show{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.899);
+    width: 50px;
+  }
+
+  .userNav li{
+    margin: 30px;
+    float: none;
+  }
+
+  .userNav a {
+    color: rgba(0, 0, 0, 0.774);
+    font-weight: bold;
+  text-decoration-style: none;
+  margin-right: 30px;
+  }
+  
+  .userNav a:hover{
+    color: rgb(211, 198, 198);
+  text-decoration-line: none;
+  }
+
+  .welcomeUser{
+    color: rgba(0, 0, 0, 0.774);
+
+  }
+  
+  .logOutForm > button{
+    color: rgba(0, 0, 0, 0.774);
+    font-weight: bold;
+  }
+
+  .logOut{
+    position: static;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+
+.card {
+  display: block;
+}
+
+
+.friendlist-div {
+  display: flex;
+  margin: 20px 50px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.friendlist-div > p{
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+}
+
+.friendlist-item{
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  display: inline-block;
+  margin: 10px auto;
+}
+
+.deleteFriendBtn{
+  font-size: 10px;
+  float: right;
+  width: 100px;
+  border: 3px solid red;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+}
+
+.addFriendBtn {
+  font-size: 10px;
+  float: right;
+  color: white;
+  width: 100px;
+  background-color: green;
+  border: 3px solid green;
+  border-radius: 30px;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+  .lobbyContainer {
+      max-height: none;
+  }
+
+  .searchUserForm {
+    margin: 50px 20px;
+  }
+  #listFriend{
+    overflow: auto;
+  }
+}

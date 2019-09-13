@@ -1,0 +1,55 @@
+.createChatContainer {
+    border-image: linear-gradient(to right, rgba(4,31,107, 1) 50%,rgba(54, 1, 35, 1) 10%,  rgba(110,9,121,1) 39%);
+    border-width: 3px;
+    border-style: solid;
+
+    border-image-slice: 1;
+    padding: 30px;
+    
+
+}
+
+.createChatFriendContainer {
+    display: block;
+    margin-left: 150px;
+    max-width: 1000px;
+    max-height: 210px;
+    justify-content: center;
+    overflow: auto;
+    margin-bottom: 30px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.list-group {
+    margin: 0px 100px;
+    height: 100px;
+}
+
+.list-group-item{
+    float: left;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+}
+
+label.username{
+    font-family: Helvetica;
+}
+
+.createChatSubmitBtn {
+    border-color: rgba(4,31,107,1);
+    background-color: rgba(4,31,107,1);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .createChatFriendContainer {
+        margin-left: 0px;
+    }
+
+    .list-group-item{
+        margin-left: 100px;
+        width: 250px;
+    }
+}

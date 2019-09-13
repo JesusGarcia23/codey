@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/stylesheets/editRoom.css">
+<link rel="stylesheet" href="/stylesheets/lobby.css">
+
+<div class="editRoomTitle">
+<h2>Edit Room: {{lobby.name}}</h2>
+</div>
+
+<div class="editRoomForm">
+<form action="/chatroom/{{lobby._id}}/edited" method="POST">
+<div class="firstEditForm">
+    <span class="theEditLabel">
+    <label for="name"> Enter Chatroom Name</label>
+    <input type="text" name="name" value="{{lobby.name}}">
+    </span>
+
+    <span class="theEditLabel">
+    <label for="topic">Specify Topic</label>
+    <input type="text" name="topic" value="{{lobby.topic}}">
+    </span>
+
+    </div>
+  <div class="editChatFriendContainer">
+                    {{!-- <ul class="list-group"> --}}
+                {{#each friendship}}
+                    <div class="list-group-item">
+                        <input type="checkbox" value="{{this.friend.username}}" name="friends">
+                        <label class="username">
+                            {{this.friend.username}}
+                        </label>
+                    </div>
+                {{/each}}
+                   {{!-- </ul> --}}
+                </div>
+    <button>Submit Changes</button>
+</form>
+</div>
