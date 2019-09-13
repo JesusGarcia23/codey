@@ -320,11 +320,17 @@ margin-top: 30px;
 
   border-image-slice: 1; */
 }
+
+.row {
+ display: flex;
+ justify-content: center;
+}
+
 .card {
   border-radius: 50px;
   height: 300px;
   width: 300px;
-  margin: 50px 100px;
+  margin: 50px 5vw;
 }
 
 .lobbiesMainTitle{
