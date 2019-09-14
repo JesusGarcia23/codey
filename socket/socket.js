@@ -129,7 +129,7 @@ function socket(io) {
                 socket.on( 'disconnect', function() {
                     console.log("DISCONNECTED, " + users[actualLocation]);
                     if(users[actualLocation] === undefined || !users[actualLocation]){
-                        socket.emit('exitChat', '/login');
+                        socket.emit('exitChat', '/');
                     }else{
                         let indexToRemove = users[actualLocation].findIndex(i => i.userId === socket.id);
                         users[actualLocation].splice(indexToRemove, 1);
