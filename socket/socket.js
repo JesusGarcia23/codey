@@ -126,14 +126,19 @@ function socket(io) {
        
                 })
 
-        socket.on( 'disconnect', function() {
-            console.log("DISCONNECTED, " + users[actualLocation]);
-            let indexToRemove = users[actualLocation].findIndex(i => i.userId === socket.id);
-            users[actualLocation].splice(indexToRemove, 1);
-            console.log(users);
-            });
-    })
-}
+                socket.on( 'disconnect', function() {
+                    console.log("DISCONNECTED, " + users[actualLocation]);
+                    if(users[actualLocation] === undefined || !users[actualLocation]){
+                        socket.emit('exitChat', '/login');
+                    }else{
+                        let indexToRemove = users[actualLocation].findIndex(i => i.userId === socket.id);
+                        users[actualLocation].splice(indexToRemove, 1);
+                        console.log(users);
+                    }
+             
+                    });
+            })
+        }
 
 
 //==========================WORKING VERSION=======================================
