@@ -114,6 +114,7 @@ function socket(io) {
         })
 
         socket.on("kicked", (data) => {
+            console.log(socket)
             if (data == undefined || !data){
                 return;
             } else{

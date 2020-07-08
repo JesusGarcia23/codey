@@ -29,7 +29,7 @@ require('./config/passportcongif')
 var app = express()
  // .connect('mongodb://localhost/undefined', { useNewUrlParser: true })
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://heroku_cgqr4gwn:amkur62dcbffijg4s5kgacd0fl@ds151066.mlab.com:51066/heroku_cgqr4gwn', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

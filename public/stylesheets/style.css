@@ -77,15 +77,17 @@ text-decoration-line: none;
   margin-right: 50px;
 }
 .codeyContainer{
-
   height: 91vh;
 }
 
 .codeyParagraph{
-color: white;
-  font-size: 30px;
+  color: white;
+  font-size: 3vw;
   margin-top: 60px;
   text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  
 }
 
 .codeyTitle{
@@ -96,6 +98,7 @@ color: white;
 .codeyTitle > h1{
   color: white;
   font-size: 150px;
+  text-shadow: 3px 3px black;
 }
 .mainBckgrd{
   width: 100vw;
@@ -128,13 +131,19 @@ color: white;
 
 
 /* LOGGING AND SIGN UP CSS */
-.signUpTitle, .loginTitle{
-  margin-top: 50px;
-text-align: center;
+
+.signloginContainer {
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.signupForm,.loginForm{
-  margin: 0px 20%;
+.signloginContainer > h1 {
+  margin-bottom: 5vh;
+  text-align: center;
+  font-size: 7vh;
 }
 
 .theErrorMessage{
