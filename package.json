@@ -29,6 +29,6 @@
     "passport-slack": "0.0.7",
     "require.js": "^1.0.0",
     "simple-format-timeago": "0.0.1",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.5.0"
   }
 }
